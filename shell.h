@@ -19,7 +19,7 @@
 #include <fcntl.h>
 #include <stddef.h>
 
-#define PROMPT ("$  ")
+#define PROMPT ("$ ")
 
 void prompt(void); 
 
