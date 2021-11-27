@@ -21,6 +21,8 @@
 
 #define PROMPT ("$ ")
 
-void prompt(void); 
+void prompt(void);
+int read_input(char *data);
+char tokenizer(char *read_input);
 
 #endif
