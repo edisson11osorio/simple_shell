@@ -1,6 +1,6 @@
 #include "shell.h"
 
-char tokenizer(read_input)
+char tokenizer(char *read_input)
 {
 	char *tokens[];
 	int i;
