@@ -1,6 +1,13 @@
-#include <shell.h>
+#include "shell.h"
 
-ssize_t read_input(char *input)
+int read_input(*data)
 {
-	input = ssize_t getline(input, strlen(input), 0);
+	int read_input;
+
+	read_input = getline(buffer,strlen(*data) ,1);
+	if (read_input == NULL)
+	{
+		return (-1);
+	}
+	return (read_input);
 }

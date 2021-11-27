@@ -7,7 +7,7 @@ int main()
     prompt();
     while (1)
     {
-			read_input();
-    }
+			tokenizer(read_input);
+		}
     return 0;
 }
