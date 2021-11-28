@@ -1,19 +1,14 @@
 #include "shell.h"
 
-char read_input(char *data)
+ssize_t *read_input(char **data, size_t *sizebuffer)
 {
-	int read_input;
-	char **buffer;
-	ssize_t sizebuffer = strlen(data);
+	ssize_t read_input = 0;
 
-	ssize_t read_input;
-	char **buffer;
-	size_t *sizebuffer = strlen(data);
-
-	read_input = getline(buffer, sizebuffer, STDIN);
-	if (read_input == '\0')
+	read_input = getline(data, sizebuffer, stdin);
+	if (read_input == NULL)
 	{
-		return ('\0');
+		free(*data)
+		return (NULL);
 	}
-	return (read_input);
+	return (*data);
 }
