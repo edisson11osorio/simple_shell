@@ -2,10 +2,10 @@
 
 char *read_input(char **data, size_t *sizebuffer)
 {
-	ssize_t read_input = 0;
+	ssize_t charactersRead = 0;
 
-	read_input = getline(data, sizebuffer, stdin);
-	if (read_input == '\0')
+	charactersRead = getline(data, sizebuffer, stdin);
+	if (charactersRead == '\0')
 	{
 		free(*data);
 		return (NULL);
