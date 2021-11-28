@@ -10,9 +10,9 @@ int main()
 	size_t sizebuffer = 0;
 	/*char **args;*/
 
-	prompt();
 	while (1)
 	{
+		prompt();
 		data = read_input(&data, &sizebuffer);
 		printf("%s", data);
 		/**args = tokenizer(data);*/
