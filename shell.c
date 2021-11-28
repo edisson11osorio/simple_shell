@@ -1,14 +1,21 @@
 #include "shell.h"
+
 /**
 * main- function emulates a shell
 **/
+
 int main()
 {
-    prompt();
-    while (1)
-    {
-			tokenizer(read_input);
-			
-		}
-    return 0;
+	char *data = NULL;
+	size_t sizebuffer = 0;
+	char **args;
+
+	prompt();
+	while (1)
+	{
+		data = read_input(&data, &sizebuffer);
+		printf("%s", data);
+		*args = tokenizer(data);
+	}
+return 0;
 }

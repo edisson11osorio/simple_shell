@@ -22,7 +22,7 @@
 #define PROMPT ("$ ")
 
 void prompt(void);
-ssize_t read_input(char *data);
+char *read_input(char **data, size_t *sizebuffer);
 char tokenizer(char *read_input);
 
 #endif
