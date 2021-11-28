@@ -8,6 +8,7 @@ int main()
     while (1)
     {
 			tokenizer(read_input);
+			
 		}
     return 0;
 }
