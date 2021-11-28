@@ -7,10 +7,8 @@ void builtin(*string)
 		exit;
 	}
 	env()
-}
-
+		}
 char *env()
 {
-	
 	return (env);
 }
