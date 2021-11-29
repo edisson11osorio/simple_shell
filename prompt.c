@@ -7,8 +7,8 @@
 
 void prompt(void)
 {
-    if (isatty(STDIN_FILENO))
-    {
-        write(STDOUT_FILENO, PROMPT, strlen(PROMPT));
-    }
+	if (isatty(STDIN_FILENO))
+	{
+		write(STDOUT_FILENO, PROMPT, strlen(PROMPT));
+	}
 }
