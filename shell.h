@@ -23,6 +23,6 @@
 
 void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
-char tokenizer(char **data, const char *DELIM);
+char *tokenizer(char *data);
 
 #endif
