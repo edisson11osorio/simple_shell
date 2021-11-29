@@ -20,7 +20,6 @@ int main()
 		while (token != NULL)
 		{
 			token = strtok(NULL, DELIM1);
-			printf("%s\n", token);
 		}
 	}
 return 0;
