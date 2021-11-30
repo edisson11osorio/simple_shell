@@ -8,8 +8,11 @@ int execFunction(char **token)
 	}
 	else if (strcmp(*token, "env\n") == 0)
 	{
-		printf("correr funcion env\n");
-		return (1);
+		int i;
+		for (i = 0; environ[i] != NULL; i++)
+		{
+			puts(environ[i]);
+		}
 	}
 	else
 	{
