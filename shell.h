@@ -27,15 +27,6 @@
 
 extern char **environ;
 
-/**
- * struct mybuild- has the builtin funct
- */
-typedef struct mybuild
-{
-    char *type;
-	void (*func)(char **tokens);
-} mybuild_t
-
 
 void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
@@ -44,15 +35,5 @@ char *pathFunction(char *command);
 char *getenv(const char *path);
 int _atoi(char *c);
 int execFunction(char **token);
-
-
-/**
-* functions that cointains  buil-in functions
-*/
-void _exitt(char **tokens);
-void _env(char **tokens);
-
-/**function_help*/
-int _strcmp(char *s1, char *s2);
 
 #endif
