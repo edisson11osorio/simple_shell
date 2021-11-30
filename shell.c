@@ -25,14 +25,14 @@ int main()
 		while (token != NULL)
 		{
 			token = strtok(NULL, DELIM1);
-			token[i] = NULL;
-			i++;
+			// token[i] = NULL;
+			// i++;
 		}
-		strcpy(command, data);
-		tokens = tokenizer(command);
-		printf("print data content [%s]\n", data);
-		printf("print command content[%s]\n", command);
-		printf("print tokens content [%s]\n", tokens);
+		// strcpy(command, data);
+		// tokens = tokenizer(command);
+		// printf("print data content [%s]\n", data);
+		// printf("print command content[%s]\n", command);
+		// printf("print tokens content [%s]\n", tokens);
 		/*execute = exec_Command(command);*/
 	}
 	return 0;

@@ -19,7 +19,11 @@
 #include <fcntl.h>
 #include <stddef.h>
 
+
+#define true (1)
+#define false (0)
 #define PROMPT ("$ ")
+
 extern char **environ;
 
 /**
@@ -27,9 +31,6 @@ extern char **environ;
  */
 typedef struct mybuild
 {
-	char *type;
-	void (*func)(char **tokens, int count, char *av, char *_paths,
-		     char *path_file, char *input_arr);
 } mybuild_t;
 
 
@@ -40,5 +41,17 @@ char *execute(char *command);
 char *pathFunction(char *command);
 void exit_function(int status);
 char *getenv(const char *name);
+int _atoi(char *c);
+
+
+/**
+* functions that cointains  buil-in functions
+*/
+void _exitt(char **tokens);
+void _env(char **tokens);
+
+/**function_help*/
+int _strcmp(char *s1, char *s2);
+
 
 #endif
