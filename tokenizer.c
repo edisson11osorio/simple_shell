@@ -1,19 +1,15 @@
 #include "shell.h"
 
-char tokenizer(char *read_input)
+char *tokenizer(char *data)
 {
-	int i;
-	char **tokens = malloc(sizeof(char *) * 1024);
+	const char *DELIM = " ";
+	char *token;
 
-	if (tokens == NULL)
+	token = strtok(data, DELIM);
+ 	while (token != NULL)
 	{
-		return (0);
+		printf("%s\n", token);
+		token = strtok(NULL, DELIM);
 	}
-	i = 0;
-	while (read_input != NULL)
-	{
-		tokens[i] = strtok(read_input, " ");
-		i++;
-	}
-	return (0);
+	return (token);
 }
