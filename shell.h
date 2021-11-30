@@ -40,11 +40,7 @@ char *read_input(char **data, size_t *sizebuffer);
 char **tokenizer(char *data);
 char *execute(char *command);
 char *pathFunction(char *command);
-void exit_function(int status);
-<<<<<<< HEAD
 char *getenv(const char *path);
-=======
-char *getenv(const char *name);
 int _atoi(char *c);
 
 
@@ -56,7 +52,5 @@ void _env(char **tokens);
 
 /**function_help*/
 int _strcmp(char *s1, char *s2);
-
->>>>>>> 22bbdf7a5217fe0ca2fa5d4ebb01f90fa84c04d5
 
 #endif

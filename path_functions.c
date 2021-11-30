@@ -13,5 +13,6 @@ char *pathFunctions (args *directoriesPath, str *command)
 		}
 		function = stat(directoriesPath[i], command);
 	}
-	return (1);
+	return (1
+		);
 }
