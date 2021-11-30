@@ -19,6 +19,7 @@
 #include <fcntl.h>
 #include <stddef.h>
 
+/**MACROS*/
 
 #define true (1)
 #define false (0)
