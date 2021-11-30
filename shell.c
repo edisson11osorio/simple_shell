@@ -9,17 +9,17 @@ int main()
 	char *data = NULL;
 	size_t sizebuffer = 0;
 	char command[1024];
-	/*char **tokens = NULL;*/
+	char **tokens;
 
 	while (1)
 	{
 		prompt();
 		data = read_input(&data, &sizebuffer);
 		strcpy(command, data);
-		/*tokens = */tokenizer(command);
-		/*printf("print data content [%s]\n", data);*/
-		/*printf("print command content[%s]\n", command);*/
-		/*printf("print tokens content [%s]\n", tokens);*/
+		tokens = tokenizer(command);
+		printf("print data content [%s]\n", data);
+		printf("print command content[%s]\n", command);
+		printf("print tokens content [%s]\n", tokens[0]);
 /*execute = exec_Command(command);*/
 	}
 	return 0;

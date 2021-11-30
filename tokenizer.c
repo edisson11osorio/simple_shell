@@ -2,16 +2,17 @@
 
 char **tokenizer(char *data)
 {
-	char **token = NULL;
+	char **token = malloc(sizeof(char *) *1024);
+	const char *DELIM = " ";
 	int i;
-	const char DELIM = ' ';
 
-	*token = strtok(data, &DELIM);
+	token[0] = strtok(data, DELIM);
 	i = 1;
  	while (token != NULL)
 	{
+		token[i] = malloc(sizeof(char) * 1024);
 		printf("%s\n", token[i]);
-		token[i] = strtok(NULL, &DELIM);
+		token[i] = strtok(NULL, DELIM);
 		i++;
 	}
 	return (token);
