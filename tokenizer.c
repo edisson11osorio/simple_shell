@@ -2,15 +2,15 @@
 
 char **tokenizer(char *data)
 {
-	const char DELIM = ' ';
 	char **token = NULL;
 	int i;
+	const char DELIM = ' ';
 
-	token = strtok(data, &DELIM);
+	*token = strtok(data, &DELIM);
 	i = 1;
  	while (token != NULL)
 	{
-		printf("%s\n", *token);
+		printf("%s\n", token[i]);
 		token[i] = strtok(NULL, &DELIM);
 		i++;
 	}

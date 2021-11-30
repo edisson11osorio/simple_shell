@@ -1,8 +1,8 @@
-// #include "shell.h"
+#include "shell.h"
 
 // void exit_function(int status)
 // {
-// 	return (0);
+// 	break;
 // }
 
 // char *getenv(const char *name)
