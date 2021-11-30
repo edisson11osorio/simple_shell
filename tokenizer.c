@@ -14,7 +14,6 @@ char **tokenizer(char *data)
 		i++;
 		token[i] = malloc(sizeof(char) * 1024);
 		token[i] = strtok(NULL, DELIM);
-		printf("token[%d] - tokenizer %s\n", i, token[i]);
 	}
 	return (token);
 }
