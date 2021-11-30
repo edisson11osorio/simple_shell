@@ -1,11 +1,11 @@
-#include "shell.h"
+// #include "shell.h"
 
-void exit_function(int status)
-{
-	return (0);
-}
+// void exit_function(int status)
+// {
+// 	return (0);
+// }
 
-char *getenv(const char *name)
-{
-	return(name);
-}
+// char *getenv(const char *name)
+// {
+// 	return (name);
+// }

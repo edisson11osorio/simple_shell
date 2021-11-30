@@ -19,8 +19,21 @@
 #include <fcntl.h>
 #include <stddef.h>
 
+/**MACROS*/
+
+#define true (1)
+#define false (0)
 #define PROMPT ("$ ")
+
 extern char **environ;
+
+/**
+ * struct mybuild- has the builtin funct
+ */
+typedef struct mybuild
+{
+} mybuild_t;
+
 
 void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
@@ -28,6 +41,22 @@ char **tokenizer(char *data);
 char *execute(char *command);
 char *pathFunction(char *command);
 void exit_function(int status);
+<<<<<<< HEAD
 char *getenv(const char *path);
+=======
+char *getenv(const char *name);
+int _atoi(char *c);
+
+
+/**
+* functions that cointains  buil-in functions
+*/
+void _exitt(char **tokens);
+void _env(char **tokens);
+
+/**function_help*/
+int _strcmp(char *s1, char *s2);
+
+>>>>>>> 22bbdf7a5217fe0ca2fa5d4ebb01f90fa84c04d5
 
 #endif
