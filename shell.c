@@ -15,7 +15,8 @@ int main()
 		prompt();
 		data = read_input(&data, &sizebuffer);
 		tokens = tokenizer(data);
-		printf("print tokens content %s\n", tokens);
+		printf("print data content [%s]\n", data);
+		printf("print tokens content [%s]\n", tokens);
 	}
 	return 0;
 }
