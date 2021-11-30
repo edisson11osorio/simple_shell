@@ -30,9 +30,11 @@ extern char **environ;
 /**
  * struct mybuild- has the builtin funct
  */
-/*typedef struct mybuild
+typedef struct mybuild
 {
-} mybuild_t;*/
+    char *type;
+	void (*func)(char **tokens);
+} mybuild_t
 
 
 void prompt(void);
