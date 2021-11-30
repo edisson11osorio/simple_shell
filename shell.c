@@ -10,6 +10,7 @@ int main()
 	size_t sizebuffer = 0;
 	const char *DELIM1 = " ";
 	char *token;
+	int i = 1;
 
 	while (1)
 	{
@@ -20,6 +21,8 @@ int main()
 		while (token != NULL)
 		{
 			token = strtok(NULL, DELIM1);
+			token[i] = NULL;
+			i++;
 		}
 	}
 	return 0;
