@@ -1,15 +1,11 @@
 #include "shell.h"
 
-void builtin(*string)
+void exit_function(int status)
 {
-	if (read_input == "exit")
-	{
-		exit;
-	}
-	env()
+	return (0);
 }
-char *env()
+
+char *getenv(const char *name)
 {
-	return (env);
+	return(name);
 }
-c

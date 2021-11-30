@@ -20,9 +20,14 @@
 #include <stddef.h>
 
 #define PROMPT ("$ ")
+extern char **environ;
 
 void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
 char *tokenizer(char *data);
+char *execute(char *command);
+char *pathFunction(char *command);
+void exit_function(int status);
+char *getenv(const char *name);
 
 #endif

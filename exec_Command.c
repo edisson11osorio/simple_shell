@@ -1,7 +1,9 @@
 #include "shell.h"
 
-char *execute(char *command)
+char *exec_Command(char *command)
 {
+	char *builtinlist[2]; {"exit", "env"};
+	
 	if (strcmp(command, builtintlist[0] == 0))
 	{
 		solution = builtinlist[0];
