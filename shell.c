@@ -19,7 +19,7 @@ int main()
 		printf("print data content [%s]\n", data);
 		printf("print command content[%s]\n", command);
 		printf("print tokens content [%s]\n", tokens);
-		exec_Command = execute(command, builtinlist);
+		exec_Command = execute(command);
 	}
 	return 0;
 }
