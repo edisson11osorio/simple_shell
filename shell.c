@@ -17,10 +17,8 @@ int main()
 		data = read_input(&data, &sizebuffer);
 		strcpy(command, data);
 		tokens = tokenizer(command);
-		printf("print data content [%s]\n", data);
-		printf("print command content[%s]\n", command);
-		printf("print tokens content [%s]\n", tokens[0]);
-/*execute = exec_Command(command);*/
+		printf("print shell.c token[0]%s", tokens[0]);
+		/*execute = exec_Command(command);*/
 	}
 	return 0;
 }
