@@ -23,7 +23,7 @@ void execFunction(char **token)
 
 		path = pathFunction();
 		directories = tokenizer(path);
-		for (i = 1; *directories[i] != '\0'; i++)
+		for (i = 0; *directories[i] != '\0'; i++)
 		{
 			printf("%s\n", directories[i]);
 		}
