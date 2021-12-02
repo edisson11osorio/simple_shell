@@ -19,18 +19,11 @@ void execFunction(char **token)
 	{
 		char *path = malloc(sizeof(char *) * 1024);
 		char **directories = malloc(sizeof(char *) * 1024);
-		int i;
-		char *function;
+		char *execfile;
 
 		path = pathFunction();
 		directories = tokenizer(path);
-		for (i = 0; *directories[i] != '\0'; i++)
-		{
-			if (function == 0)
-			{
-				return (0);
-			}
-			function = stat(directories[i], token);
-		}
+		execfile = matchfunction(token, directories);
+		printf("%s", execfile);
 	}
 }

@@ -35,5 +35,6 @@ char *getenv(const char *path);
 int _atoi(char *c);
 void execFunction(char **token);
 char *pathFunction(void);
+char *matchfunction(char **token, char **directories);
 
 #endif
