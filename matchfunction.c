@@ -2,14 +2,17 @@
 
 char *matchfunction(char **token, char **directories)
 {
-	char *execfile = malloc(sizeof(char *) * 1024);
-	int i, function;
+	char *execfile = malloc(sizeof(char) * 1024);
+	int i, function = 1;
+	struct stat *buf = malloc(1024);
+	char *concat_1, *concat_2;
 
-	token[0] = strcat("/", token[0]);
+	concat_1 = strcat("/", token[0]);
 	for (i = 0; *directories[i] != '\0' || function != 0; i++)
 	{
-		function = stat(directories[i], *token[0]);
+		concat_2 = strcat(directories[i], concat_1);
+		function = stat(concat_2, buf);
 	}
-	execfile = strcat(directories[i],token[0]);
+	execfile = concat_2;
 	return (execfile);
 }
