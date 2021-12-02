@@ -17,15 +17,20 @@ void execFunction(char **token)
 	}
 	else
 	{
-		char *path = malloc(sizeof(char) * 1024);
+		char *path = malloc(sizeof(char *) * 1024);
 		char **directories = malloc(sizeof(char *) * 1024);
 		int i;
+		char *function;
 
 		path = pathFunction();
 		directories = tokenizer(path);
 		for (i = 0; *directories[i] != '\0'; i++)
 		{
-			printf("%s\n", directories[i]);
+			if (function == 0)
+			{
+				return (0);
+			}
+			function = stat(directories[i], token);
 		}
 	}
 }
