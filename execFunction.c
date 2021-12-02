@@ -1,6 +1,6 @@
 #include "shell.h"
 
-int execFunction(char **token)
+void execFunction(char **token)
 {
 	if (strcmp(*token, "exit\n") == 0)
 	{
@@ -9,6 +9,7 @@ int execFunction(char **token)
 	else if (strcmp(*token, "env\n") == 0)
 	{
 		int i;
+
 		for (i = 0; environ[i] != NULL; i++)
 		{
 			puts(environ[i]);
@@ -16,8 +17,9 @@ int execFunction(char **token)
 	}
 	else
 	{
-		printf("ir al path\n");
-		return (2);
+		char **path = malloc(sizeof(char) * 1024);
+
+		path = pathFunction();
+		printf("%s", *path);
 	}
-	return (-1);
 }
