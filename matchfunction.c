@@ -2,19 +2,23 @@
 
 char *matchfunction(char **token, char **directories)
 {
-	int i, function = 1;
-	struct stat *buf = malloc(1024);
-	char *concat_2 = malloc(1024);
-	char *concat_1 = malloc(1024);
+	int i/*function = 1*/;
+	/*struct stat buf;
+	char *concat;
+	char *concat_temp;*/
 
-	concat_1 = strcat("/", token[0]);
-	printf("%s", concat_1);
-	printf("%s", directories[0]);
-	for (i = 0; *directories[i] != '\0' || function != 0; i++)
+	printf("token es %s\n", *token);
+	for (i = 0; directories[i] != NULL/* || function != 0*/;i++)
 	{
-		concat_2 = strcat(directories[i], concat_1);
-		printf("%s", concat_2);
-		function = stat(concat_2, buf);
-		}
-	return (concat_1);
+		printf("%s\n", directories[i]);
+		/*
+		printf("en matchfunction, directories[%i] es = %s", i, directories[i]);
+		concat_temp = strcat("/", *token);
+		printf("en matchfunction, concat_temp es = %s",concat_temp);
+		concat = strcat(directories[i], concat_temp);
+		printf("en matchfunction, concat es = %s",concat);
+		function = stat(concat, &buf);
+		*/
+	}
+	return (directories[0]);
 }
