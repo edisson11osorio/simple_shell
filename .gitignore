@@ -1,10 +1,2 @@
-_env.c
-_exitt.c
-atoi.c
-builtins.c
-exec_Command.c
-funct_help.c
-getEnviron.c
-path_functions.c
 shell.h.gch
 shell.h.gch
