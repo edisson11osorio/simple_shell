@@ -14,9 +14,8 @@ void running_execfile(char *execfile, char **token)
 	{
 		printf("proceso hijo es %d\n", getpid());
 		printf("prueba\n");
+		printf("execfile = %s", execfile);
 		execve(execfile, token, environ);
-		free(execfile);
-		free(token);
 		exit(EXIT_SUCCESS);
 	}
 	else

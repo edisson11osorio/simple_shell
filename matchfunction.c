@@ -13,5 +13,6 @@ char *matchfunction(char **token, char **directories)
 		concat = str_concat(directories[i], concat_temp);
 		function = stat(concat, &buf);
 	}
+	free(directories);
 	return (concat);
 }
