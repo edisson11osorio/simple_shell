@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void running_execfile(char *execfile)
+void running_execfile(char *execfile, char **token)
 {
 	pid_t pid;
 
@@ -14,6 +14,7 @@ void running_execfile(char *execfile)
 	{
 		printf("printed from child process - %d\n", getpid());
 		printf("execfile es %s\n", execfile);
+		execve(execfile, token, environ);
 		exit(EXIT_SUCCESS);
 	}
 	else

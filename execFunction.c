@@ -24,6 +24,6 @@ void execFunction(char **token)
 		path = pathFunction();
 		directories = tokenizer_path(path);
 		execfile = matchfunction(token, directories);
-		running_execfile(execfile);
+		running_execfile(execfile, token);
 	}
 }
