@@ -7,11 +7,10 @@ char *matchfunction(char **token, char **directories)
 	char *concat;
 	char *concat_temp;
 
-	for (i = 1; directories[i] != NULL || function != 0; i++)
+	for (i = 1; directories[i] != NULL && function != 0; i++)
 	{
 		concat_temp = str_concat("/", *token);
 		concat = str_concat(directories[i], concat_temp);
-		printf("%s\n",concat);
 		function = stat(concat, &buf);
 	}
 	return (concat);
