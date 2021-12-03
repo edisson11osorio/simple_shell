@@ -22,15 +22,10 @@ void execFunction(char **token)
 		char *execfile;
 
 		path = pathFunction();
-		printf("path en exec antes es: %s\n", path);
 		directories = tokenizer_path(path);
-		printf("directories[0] = %s\n", directories[1]);
 		path = pathFunction();
-		printf("path en exec despues tokenizer es: %s\n", path);
 		execfile = matchfunction(token, directories);
-		printf("execfile = %s\n", execfile);
 		running_execfile(execfile, token);
 		path = pathFunction();
-		printf("path en exec despues running es: %s\n", path);
 	}
 }
