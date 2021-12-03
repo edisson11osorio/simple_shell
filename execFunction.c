@@ -22,7 +22,7 @@ void execFunction(char **token)
 		char *execfile;
 
 		path = pathFunction();
-		directories = tokenizer(path);
+		directories = tokenizer_path(path);
 		execfile = matchfunction(token, directories);
 		printf("%s", execfile);
 	}
