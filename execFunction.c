@@ -4,7 +4,7 @@ void execFunction(char **token)
 {
 	if (strcmp(*token, "exit") == 0)
 	{
-		exit(1);
+		exit(EXIT_SUCCESS);
 	}
 	else if (strcmp(*token, "env") == 0)
 	{

@@ -19,7 +19,6 @@ void running_execfile(char *execfile)
 	else
 	{
 		printf("printed from parent process - %d\n", getpid());
-		wait(NULL);
+		wait(0);
 	}
-	exit(EXIT_SUCCESS);
 }
