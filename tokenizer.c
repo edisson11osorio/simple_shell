@@ -3,9 +3,10 @@
 char **tokenizer(char *data)
 {
 	char **token = malloc(sizeof(char *) *1024);
-	const char *DELIM = " :=";
-	int i;
+	const char *DELIM = " :=\n";
+	int i, j;
 
+	
 	token[0] = malloc(sizeof(char) * 1024);
 	token[0] = strtok(data, DELIM);
 	i = 0;

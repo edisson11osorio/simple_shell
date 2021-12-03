@@ -2,11 +2,11 @@
 
 void execFunction(char **token)
 {
-	if (strcmp(*token, "exit\n") == 0)
+	if (strcmp(*token, "exit") == 0)
 	{
 		exit(1);
 	}
-	else if (strcmp(*token, "env\n") == 0)
+	else if (strcmp(*token, "env") == 0)
 	{
 		int i;
 
