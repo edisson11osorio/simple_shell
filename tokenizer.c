@@ -3,7 +3,7 @@
 char **tokenizer(char *data)
 {
 	char **token = malloc(sizeof(char *) *1024);
-	const char *DELIM = " :=\n";
+	const char *DELIM = " \n";
 	int i;
 
 	token[0] = malloc(sizeof(char) * 1024);
@@ -21,7 +21,7 @@ char **tokenizer(char *data)
 char **tokenizer_path(char *data)
 {
 	char **token = malloc(sizeof(char *) *1024);
-	const char *DELIM = ":";
+	const char *DELIM = "=:";
 	int i;
 
 	token[0] = malloc(sizeof(char) * 1024);

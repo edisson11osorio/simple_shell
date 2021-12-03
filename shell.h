@@ -38,5 +38,6 @@ void execFunction(char **token);
 char *pathFunction(void);
 char *matchfunction(char **token, char **directories);
 char *str_concat(char *s1, char *s2);
+int *executefunction(char *execfile);
 
 #endif
