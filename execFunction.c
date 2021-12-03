@@ -4,6 +4,7 @@ void execFunction(char **token)
 {
 	if (strcmp(*token, "exit") == 0)
 	{
+		free(token);
 		exit(EXIT_SUCCESS);
 	}
 	else if (strcmp(*token, "env") == 0)
@@ -12,6 +13,7 @@ void execFunction(char **token)
 
 		for (i = 0; environ[i] != NULL; i++)
 		{
+			free(token);
 			puts(environ[i]);
 		}
 	}
@@ -23,7 +25,9 @@ void execFunction(char **token)
 
 		path = pathFunction();
 		directories = tokenizer_path(path);
+		printf("directories[0] = %s\n", directories[1]);
 		execfile = matchfunction(token, directories);
+		printf("execfile = %s\n", execfile);
 		running_execfile(execfile, token);
 	}
 }

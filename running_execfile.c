@@ -12,14 +12,16 @@ void running_execfile(char *execfile, char **token)
 	}
 	if (pid == 0)
 	{
-		printf("printed from child process - %d\n", getpid());
-		printf("execfile es %s\n", execfile);
+		printf("proceso hijo es %d\n", getpid());
+		printf("prueba\n");
 		execve(execfile, token, environ);
+		free(execfile);
+		free(token);
 		exit(EXIT_SUCCESS);
 	}
 	else
 	{
-		printf("printed from parent process - %d\n", getpid());
+		printf("proceso padre - %d\n", getpid());
 		wait(0);
 	}
 }
