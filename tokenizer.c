@@ -18,13 +18,11 @@ char **tokenizer(char *command)
 	return (token);
 }
 
-char **tokenizer_path(char *path)
+char **tokenizer_path(char *copyPath)
 {
 	char **directories = malloc(sizeof(char *) * 1024);
 	const char *DELIM = "=:";
 	int i;
-	char *copyPath = malloc(sizeof(char *) * 1024);
-	strcpy(copyPath, path);
 
 	directories[0] = malloc(sizeof(char) * 1024);
 	directories[0] = strtok(copyPath, DELIM);
@@ -36,6 +34,5 @@ char **tokenizer_path(char *path)
 		directories[i] = malloc(sizeof(char) * 1024);
 		directories[i] = strtok(NULL, DELIM);
 	}
-	free(copyPath);
 	return (directories);
 }

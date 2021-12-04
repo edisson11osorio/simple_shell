@@ -20,10 +20,11 @@ void execFunction(char **token)
 		char *path = malloc(sizeof(char *) * 1024);
 		char **directories = malloc(sizeof(char *) * 1024);
 		char *execfile;
+		char copyPath[1024];
 
 		path = pathFunction();
-		directories = tokenizer_path(path);
-		path = pathFunction();
+		strcpy(copyPath, path);
+		directories = tokenizer_path(copyPath);
 		execfile = matchfunction(token, directories);
 		running_execfile(execfile, token);
 	}
