@@ -17,8 +17,8 @@ void execFunction(char **token)
 	}
 	else
 	{
-		char *path = malloc(sizeof(char *) * 1024);
-		char **directories = malloc(sizeof(char *) * 1024);
+		char *path;
+		char **directories = malloc(1024);
 		char *execfile;
 		char copyPath[1024];
 
