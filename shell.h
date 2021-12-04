@@ -31,8 +31,8 @@ extern char **environ;
 
 void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
-char **tokenizer(char *data);
-char **tokenizer_path(char *data);
+char **tokenizer(char *command);
+char **tokenizer_path(char *path);
 char *getenv(const char *path);
 int _atoi(char *c);
 void execFunction(char **token);

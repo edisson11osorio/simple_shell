@@ -1,13 +1,13 @@
 #include "shell.h"
 
-char **tokenizer(char *data)
+char **tokenizer(char *command)
 {
 	char **token = malloc(sizeof(char *) * 1024);
 	const char *DELIM = " \n";
 	int i;
 
 	token[0] = malloc(sizeof(char) * 1024);
-	token[0] = strtok(data, DELIM);
+	token[0] = strtok(command, DELIM);
 	i = 0;
 	while (token[i] != NULL)
 	{
@@ -18,25 +18,24 @@ char **tokenizer(char *data)
 	return (token);
 }
 
-char **tokenizer_path(char *data)
+char **tokenizer_path(char *path)
 {
 	char **token = malloc(sizeof(char *) * 1024);
 	const char *DELIM = "=:";
-	const char *DELIM2 = ":";
 	int i;
-	char *copy = malloc(sizeof(char *) * 1024);
-	strcpy(copy, data);
+	char *copyPath = malloc(sizeof(char *) * 1024);
+	strcpy(copyPath, path);
 
 	token[0] = malloc(sizeof(char) * 1024);
-	token[0] = strtok(copy, DELIM);
+	token[0] = strtok(copyPath, DELIM);
 	i = 0;
 	while (token[i] != NULL)
 	{
 
 		i++;
 		token[i] = malloc(sizeof(char) * 1024);
-		token[i] = strtok(NULL, DELIM2);
+		token[i] = strtok(NULL, DELIM);
 	}
-	free(copy);
+	free(copyPath);
 	return (token);
 }
