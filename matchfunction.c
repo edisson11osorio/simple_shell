@@ -2,10 +2,9 @@
 
 char *matchfunction(char **token, char **directories)
 {
-	int i, function = 1;
+	int i, function = 1, number = 1;
 	struct stat buf;
-	char *concat;
-	char *concat_temp;
+	char *concat, *concat_temp;
 
 	for (i = 1; directories[i] != NULL && function != 0; i++)
 	{
@@ -15,7 +14,7 @@ char *matchfunction(char **token, char **directories)
 	}
 	if (function != 0)
 	{
-		printf("%s: command not found\n", *token);
+		printf("hsh: %d: %s: not found\n", number, *token);
 	}
 	free(directories);
 	return (concat);
