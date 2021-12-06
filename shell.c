@@ -15,6 +15,11 @@ int main()
 	{
 		prompt();
 		data = read_input(&data, &sizebuffer);
+		if (*data == EOF)
+		{
+			printf("There are stopped jobs.");
+			exit(0);
+		}
 		strcpy(command, data);
 		tokens = tokenizer(command);
 		execFunction(tokens);

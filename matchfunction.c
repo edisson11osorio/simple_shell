@@ -13,6 +13,10 @@ char *matchfunction(char **token, char **directories)
 		concat = str_concat(directories[i], concat_temp);
 		function = stat(concat, &buf);
 	}
+	if (function != 0)
+	{
+		printf("%s: command not found\n", *token);
+	}
 	free(directories);
 	return (concat);
 }

@@ -22,6 +22,11 @@ void execFunction(char **token)
 		char *execfile;
 		char copyPath[1024];
 
+		if (directories == NULL)
+		{
+			perror("error");
+			exit(-1);
+		}
 		path = pathFunction();
 		strcpy(copyPath, path);
 		directories = tokenizer_path(copyPath);
