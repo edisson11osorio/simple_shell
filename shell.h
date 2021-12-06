@@ -35,9 +35,9 @@ char **tokenizer(char *command);
 char **tokenizer_path(char *path);
 char *getenv(const char *path);
 int _atoi(char *c);
-void execFunction(char **token);
+void execFunction(char **token, int number_loop);
 char *pathFunction(void);
-char *matchfunction(char **token, char **directories);
+char *matchfunction(char **token, char **directories, int number_loop);
 char *str_concat(char *s1, char *s2);
 void running_execfile(char *execfile, char **token);
 

@@ -10,7 +10,7 @@ int main()
 	size_t sizebuffer = 0;
 	char command[1024];
 	char **tokens;
-	int number_loop = 0;
+	int number_loop = 1;
 
 	while (1)
 	{
@@ -23,9 +23,8 @@ int main()
 		}
 		strcpy(command, data);
 		tokens = tokenizer(command);
-		execFunction(tokens);
+		execFunction(tokens, number_loop);
 		number_loop++;
-		printf("number loop is %d", number_loop);
 	}
 	return 0;
 }

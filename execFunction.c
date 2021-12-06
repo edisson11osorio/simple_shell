@@ -1,6 +1,6 @@
 #include "shell.h"
 
-void execFunction(char **token)
+void execFunction(char **token, int number_loop)
 {
 	if (strcmp(*token, "exit") == 0)
 	{
@@ -30,7 +30,7 @@ void execFunction(char **token)
 		path = pathFunction();
 		strcpy(copyPath, path);
 		directories = tokenizer_path(copyPath);
-		execfile = matchfunction(token, directories);
+		execfile = matchfunction(token, directories, number_loop);
 		running_execfile(execfile, token);
 	}
 }

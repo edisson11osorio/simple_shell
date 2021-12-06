@@ -1,8 +1,8 @@
 #include "shell.h"
 
-char *matchfunction(char **token, char **directories)
+char *matchfunction(char **token, char **directories, int number_loop)
 {
-	int i, function = 1, number = 1;
+	int i, function = 1;
 	struct stat buf;
 	char *concat, *concat_temp;
 
@@ -14,7 +14,7 @@ char *matchfunction(char **token, char **directories)
 	}
 	if (function != 0)
 	{
-		printf("hsh: %d: %s: not found\n", number, *token);
+		printf("hsh: %d: %s: not found\n", number_loop, *token);
 	}
 	free(directories);
 	return (concat);
