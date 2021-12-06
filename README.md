@@ -17,6 +17,38 @@ In this repository you will find our version of a simple UNIX commandinterpreter
  This project has been tested on `Ubuntu 14.06.6 LTS`
 ```
 
+## Instructions
+
+```
+ *Compiling the program: gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+
+*Interactive mode:
+
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+
+*Non-interactie mode:
+
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+
+```
+
+## Files
+
 | **NAME**                   | CONTENT                                                                |
 | -------------------------- | ---------------------------------------------------------------------- | --- | --- |
 | [_README.md_](./README.md) | It contains all the information about the project and all its content. |
@@ -25,6 +57,10 @@ In this repository you will find our version of a simple UNIX commandinterpreter
 | [_AUTHORS_](./AUTHORS)     | File in which the people who contributed to this project are listed.   |
 
 ## Flowchart
+
+### Requirements
+
+## General
 
 ## Authors
 
