@@ -49,15 +49,23 @@ $
 
 ## Files
 
-| **NAME**                   | CONTENT                                                                |
-| -------------------------- | ---------------------------------------------------------------------- |
-| [_README.md_](./README.md) | It contains all the information about the project and all it's content |
-| [_shell.c_](./shell.c)     | Is the main function of our project.                                   |
-| [_shell.h_](./shell.h)     | It's the header of our project.                                        |
-| [_prompt_](./prompt.c)     | Function that shows the '$' as our promp                               |
-| [_AUTHORS_](./AUTHORS)     | File in which the people who contributed to this project are listed.   |
+| **NAME**                                   | CONTENT                                                                |
+| ------------------------------------------ | ---------------------------------------------------------------------- |
+| [_README.md_](./README.md)                 | It contains all the information about the project and all it's content |
+| [_shell.c_](./shell.c)                     | Is the main function of our project.                                   |
+| [_shell.h_](./shell.h)                     | It's the header of our project.                                        |
+| [_prompt_](./prompt.c)                     | Function that shows the '$' as our promp                               |
+| [_tokenizer_](./tokenizer.c)               | Function                                                               |
+| [_execfunction_](./execfunction.c)         | Function.                                                              |
+| [_pathfunction_](./pathfunction.c)         | Function.                                                              |
+| [_read_input_](./read_input.c)             | Function.                                                              |
+| [_running_execfile_](./running_execfile.c) | Function.                                                              |
+| [_str_concat_](./str_concat.c)             | Function.                                                              |
+| [_AUTHORS_](./AUTHORS)                     | File in which the people who contributed to this project are listed.   |
 
 ## Flowchart
+
+<a href=#><img src="https://miro.com/app/board/o9J_lghr8Yk=/"/></a>
 
 ### Requirements
 
@@ -73,6 +81,24 @@ No more than 5 functions per file
 All your header files should be include guarded
 Use system calls only when you need to (why?)
 List of allowed functions and system calls
+
+execve (man 2 execve)
+exit (man 3 exit)
+fork (man 2 fork)
+free (man 3 free)
+getline (man 3 getline)
+isatty (man 3 isatty)
+malloc (man 3 malloc)
+open (man 2 open)
+opendir (man 3 opendir)
+perror (man 3 perror)
+read (man 2 read)
+strtok (man 3 strtok)
+wait (man 2 wait)
+waitpid (man 2 waitpid)
+wait3 (man 2 wait3)
+wait4 (man 2 wait4)
+write (man 2 write)
 
 ## Authors
 
