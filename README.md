@@ -82,7 +82,7 @@ All your header files should be include guarded
 Use system calls only when you need to (why?)
 List of allowed functions and system calls
 
-execve (man 2 execve)
+|execve (man 2 execve)|
 exit (man 3 exit)
 fork (man 2 fork)
 free (man 3 free)
