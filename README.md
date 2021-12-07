@@ -102,5 +102,5 @@ write (man 2 write)
 
 ## Authors
 
-- [_Joana Casallas_](https://github.com/joacasallas) -
+- [_Joana Casallas_](https://github.com/joacasallas) - joacasallas@gmail.com
 - [_Edisson Osorio_](https://github.com/edisson11osorio) - edissonosi12@gmail.com
