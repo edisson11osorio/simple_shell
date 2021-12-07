@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
-* main- function emulates a shell
-**/
+ * main- function emulates a shell
+ **/
 
 int main()
 {
@@ -16,9 +16,9 @@ int main()
 	{
 		prompt();
 		data = read_input(&data, &sizebuffer);
-		if (*data == EOF)
+		if (*data = EOF)
 		{
-			printf("There are stopped jobs.");
+			printf("\n");
 			exit(0);
 		}
 		strcpy(command, data);
