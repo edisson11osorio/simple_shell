@@ -1,5 +1,9 @@
 #include "shell.h"
 
+/**
+ *
+ *
+ **/
 char *read_input(char **data, size_t *sizebuffer)
 {
 	ssize_t charactersRead = 0;

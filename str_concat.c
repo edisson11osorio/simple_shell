@@ -9,7 +9,6 @@
  * Return: pointer which contains the contents of s1,
  * followed by the contents of s2, and null terminated.
  */
-
 char *str_concat(char *s1, char *s2)
 {
 	char *concat;

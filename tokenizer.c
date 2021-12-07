@@ -1,5 +1,8 @@
 #include "shell.h"
 
+/**
+ *
+ **/
 char **tokenizer(char *command)
 {
 	char **token = malloc(sizeof(char *) * 1024);
@@ -8,7 +11,7 @@ char **tokenizer(char *command)
 
 	if (token == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 	token[0] = malloc(sizeof(char) * 1024);
 	if (token[0] == NULL)
@@ -21,7 +24,7 @@ char **tokenizer(char *command)
 	{
 		i++;
 		token[i] = malloc(sizeof(char) * 1024);
-		if(token[i] == NULL)
+		if (token[i] == NULL)
 		{
 			return (NULL);
 		}
@@ -29,7 +32,6 @@ char **tokenizer(char *command)
 	}
 	return (token);
 }
-
 char **tokenizer_path(char *copyPath)
 {
 	char **directories = malloc(sizeof(char *) * 1024);

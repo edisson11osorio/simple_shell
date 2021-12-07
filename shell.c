@@ -3,7 +3,6 @@
 /**
  * main- function emulates a shell
  **/
-
 int main()
 {
 	char *data = NULL;

@@ -1,5 +1,8 @@
 #include "shell.h"
 
+/**
+ * main- function emulates a shell
+ **/
 char *matchfunction(char **token, char **directories, int number_loop)
 {
 	int i, function = 1;
