@@ -15,6 +15,8 @@ char *matchfunction(char **token, char **directories, int number_loop)
 	if (function != 0)
 	{
 		printf("hsh: %d: %s: not found\n", number_loop, *token);
+		free(directories);
+		return (0);
 	}
 	free(directories);
 	return (concat);
