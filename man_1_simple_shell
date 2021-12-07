@@ -14,3 +14,40 @@ The sh is a command language interpreter that shall execute commands
 read from a command line string, the standard input, or a specified
 file.
 .PP
+It should be compiled this way: gcc \-Wall \-Werror \-Wextra \-pedantic
+\-std=gnu89 \f[I].h \f[R].c \-o hsh
+.PP
+This shell works in both, interactive and non\-interactive mode.
+Example: (Interactive Mode) $ ./hsh
+()/\f[I]b\f[R]\f[I]i\f[R]\f[I]n\f[R]/\f[I]l\f[R]\f[I]s\f[R]\f[I]h\f[R]\f[I]s\f[R]\f[I]h\f[R]\f[I]m\f[R]\f[I]a\f[R]\f[I]i\f[R]\f[I]n\f[R].\f[I]c\f[R]\f[I]s\f[R]\f[I]h\f[R]\f[I]e\f[R]\f[I]l\f[R]\f[I]l\f[R].\f[I]c\f[R]()
+($) exit $
+.IP
+.nf
+\f[C]
+      (Non\-interactive Mode)
+      $ echo \[dq]/bin/ls\[dq] | ./hsh
+      hsh main.c shell.c test_ls_2
+      $
+      $ cat test_ls_2
+      /bin/ls
+      /bin/ls
+      $
+      $ cat test_ls_2 | ./hsh
+      hsh main.c shell.c test_ls_2
+      hsh main.c shell.c test_ls_2
+      $
+\f[R]
+.fi
+.PP
+The user can exit the program by typing the command \[lq]exit\[rq] or
+Ctrl + D
+.SH BUGS
+.PP
+No known bugs
+.SH COPYRIGHT
+.PP
+Copyright \[rg] 2021 Joana Casallas, Edisson osorio
+This is free software: you are free to change and redistribute it.
+There is no WARRANTY, to the extent permitted by law.
+.SH AUTHORS
+Joana Casallas, Edisson osorio
