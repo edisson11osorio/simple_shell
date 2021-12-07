@@ -15,7 +15,7 @@ int main()
 	{
 		prompt();
 		data = read_input(&data, &sizebuffer);
-		if (*data = EOF)
+		if (*data == EOF)
 		{
 			printf("\n");
 			exit(0);
