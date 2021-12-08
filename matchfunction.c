@@ -15,17 +15,24 @@ char *matchfunction(char **token, char **directories, int number_loop)
 	struct stat buf;
 	char *concat, *concat_temp;
 
-	for (i = 1; directories[i] != NULL && function != 0; i++)
+	if (_strchr(*token, '/') == 0)
 	{
-		concat_temp = str_concat("/", *token);
-		concat = str_concat(directories[i], concat_temp);
-		function = stat(concat, &buf);
+		return (*token);
 	}
-	if (function != 0)
+	else
 	{
-		printf("hsh: %d: %s: not found\n", number_loop, *token);
-		free(directories);
-		return (0);
+		for (i = 1; directories[i] != NULL && function != 0; i++)
+		{
+			concat_temp = str_concat("/", *token);
+			concat = str_concat(directories[i], concat_temp);
+			function = stat(concat, &buf);
+		}
+		if (function != 0)
+		{
+			printf("hsh: %d: %s: not found\n", number_loop, *token);
+			free(directories);
+			return (0);
+		}
 	}
 	free(directories);
 	return (concat);
