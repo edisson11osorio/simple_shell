@@ -11,14 +11,17 @@ int main(void)
 	char *data = NULL;
 	size_t sizebuffer = 0;
 	char command[1024];
-	char **tokens;
+	char **tokens = NULL;
 
 	do {
-		prompt();
+		if (isatty(STDIN_FILENO))
+		{
+			prompt();
+		}
 		data = read_input(&data, &sizebuffer);
 		_strcpy(command, data);
 		tokens = tokenizer(command);
 		execFunction(tokens);
-	} while (isatty(STDIN_FILENO));
+	} while (1);
 	return (0);
 }
