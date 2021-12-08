@@ -31,7 +31,7 @@ void execFunction(char **token)
 		if (directories == NULL)
 		{
 			perror("error");
-			exit(-1);
+			exit(EXIT_FAILURE);
 		}
 		path = pathFunction();
 		_strcpy(copyPath, path);

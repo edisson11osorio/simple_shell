@@ -22,7 +22,7 @@ char *read_input(char **data, size_t *sizebuffer)
 	{
 		free(*data);
 		_putchar('\n');
-		exit(0);
+		exit(EXIT_SUCCESS);
 	}
 	return (*data);
 }

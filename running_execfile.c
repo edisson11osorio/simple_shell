@@ -27,7 +27,7 @@ void running_execfile(char *execfile, char **token)
 		execute = execve(execfile, token, environ);
 		if (execute == -1)
 		{
-			exit(errno);
+			exit(EXIT_FAILURE);
 		}
 		exit(EXIT_SUCCESS);
 	}
