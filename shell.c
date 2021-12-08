@@ -12,7 +12,6 @@ int main(void)
 	size_t sizebuffer = 0;
 	char command[1024];
 	char **tokens;
-	int number_loop = 1;
 
 	while (1)
 	{
@@ -25,8 +24,7 @@ int main(void)
 		}
 		_strcpy(command, data);
 		tokens = tokenizer(command);
-		execFunction(tokens, number_loop);
-		number_loop++;
+		execFunction(tokens);
 	}
 	return (0);
 }

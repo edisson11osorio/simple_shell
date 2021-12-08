@@ -14,7 +14,7 @@ void running_execfile(char *execfile, char **token)
 
 	if (execfile == NULL)
 	{
-		exit(errno);
+		_puts("./shell: No such file or directory");
 	}
 	pid = fork();
 	if (pid == -1)

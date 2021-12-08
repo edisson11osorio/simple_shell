@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-void execFunction(char **token, int number_loop)
+void execFunction(char **token)
 {
 	if (_strcmp(*token, "exit") == 0)
 	{
@@ -37,7 +37,7 @@ void execFunction(char **token, int number_loop)
 		path = pathFunction();
 		_strcpy(copyPath, path);
 		directories = tokenizer_path(copyPath);
-		execfile = matchfunction(token, directories, number_loop);
+		execfile = matchfunction(token, directories);
 		running_execfile(execfile, token);
 	}
 }

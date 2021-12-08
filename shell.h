@@ -32,9 +32,9 @@ void prompt(void);
 char *read_input(char **data, size_t *sizebuffer);
 char **tokenizer(char *command);
 char **tokenizer_path(char *path);
-void execFunction(char **token, int number_loop);
+void execFunction(char **token);
 char *pathFunction(void);
-char *matchfunction(char **token, char **directories, int number_loop);
+char *matchfunction(char **token, char **directories);
 void running_execfile(char *execfile, char **token);
 
 /*customized functions*/

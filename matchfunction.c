@@ -9,7 +9,7 @@
  * Return: pointer with the path of the executable file
  */
 
-char *matchfunction(char **token, char **directories, int number_loop)
+char *matchfunction(char **token, char **directories)
 {
 	int i, function = 1;
 	struct stat buf;
@@ -31,7 +31,6 @@ char *matchfunction(char **token, char **directories, int number_loop)
 	}
 	if (function != 0)
 	{
-		printf("hsh: %d: %s: not found\n", number_loop, *token);
 		free(directories);
 		return (NULL);
 	}
