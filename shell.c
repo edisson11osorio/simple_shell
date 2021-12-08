@@ -20,7 +20,7 @@ int main(void)
 		data = read_input(&data, &sizebuffer);
 		if (*data == EOF)
 		{
-			printf("\n");
+			_putchar('\n');
 			exit(0);
 		}
 		_strcpy(command, data);

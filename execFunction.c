@@ -19,7 +19,7 @@ void execFunction(char **token, int number_loop)
 
 		for (i = 0; environ[i] != NULL; i++)
 		{
-			puts(environ[i]);
+			_puts(environ[i]);
 		}
 	}
 	else

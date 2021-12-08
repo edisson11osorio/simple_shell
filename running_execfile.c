@@ -12,6 +12,10 @@ void running_execfile(char *execfile, char **token)
 	pid_t pid;
 	int execute = 0;
 
+	if (execfile == NULL)
+	{
+		exit(errno);
+	}
 	pid = fork();
 	if (pid == -1)
 	{

@@ -17,7 +17,8 @@ char *matchfunction(char **token, char **directories, int number_loop)
 
 	if (_strchr(*token, '/') == 0)
 	{
-		return (*token);
+		function = stat(*token, &buf);
+		concat = *token;
 	}
 	else
 	{
@@ -27,12 +28,12 @@ char *matchfunction(char **token, char **directories, int number_loop)
 			concat = str_concat(directories[i], concat_temp);
 			function = stat(concat, &buf);
 		}
-		if (function != 0)
-		{
-			printf("hsh: %d: %s: not found\n", number_loop, *token);
-			free(directories);
-			return (0);
-		}
+	}
+	if (function != 0)
+	{
+		printf("hsh: %d: %s: not found\n", number_loop, *token);
+		free(directories);
+		return (NULL);
 	}
 	free(directories);
 	return (concat);
