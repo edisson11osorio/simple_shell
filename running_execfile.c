@@ -20,6 +20,7 @@ void running_execfile(char *execfile, char **token)
 	if (pid == -1)
 	{
 		perror("fork");
+		free (*token);
 		exit(EXIT_FAILURE);
 	}
 	if (pid == 0)
@@ -27,8 +28,10 @@ void running_execfile(char *execfile, char **token)
 		execute = execve(execfile, token, environ);
 		if (execute == -1)
 		{
+			free(*token);
 			exit(EXIT_FAILURE);
 		}
+		free(*token);
 		exit(EXIT_SUCCESS);
 	}
 	else
