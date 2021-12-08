@@ -23,7 +23,7 @@ int main(void)
 			printf("\n");
 			exit(0);
 		}
-		strcpy(command, data);
+		_strcpy(command, data);
 		tokens = tokenizer(command);
 		execFunction(tokens, number_loop);
 		number_loop++;

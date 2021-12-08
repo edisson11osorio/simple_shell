@@ -9,11 +9,11 @@
 
 void execFunction(char **token, int number_loop)
 {
-	if (strcmp(*token, "exit") == 0)
+	if (_strcmp(*token, "exit") == 0)
 	{
 		exit(EXIT_SUCCESS);
 	}
-	else if (strcmp(*token, "env") == 0)
+	else if (_strcmp(*token, "env") == 0)
 	{
 		int i;
 
@@ -35,7 +35,7 @@ void execFunction(char **token, int number_loop)
 			exit(-1);
 		}
 		path = pathFunction();
-		strcpy(copyPath, path);
+		_strcpy(copyPath, path);
 		directories = tokenizer_path(copyPath);
 		execfile = matchfunction(token, directories, number_loop);
 		running_execfile(execfile, token);
