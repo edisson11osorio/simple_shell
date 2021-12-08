@@ -21,7 +21,6 @@ char *read_input(char **data, size_t *sizebuffer)
 	if (charactersRead == EOF)
 	{
 		free(*data);
-		_putchar('\n');
 		exit(EXIT_SUCCESS);
 	}
 	return (*data);
