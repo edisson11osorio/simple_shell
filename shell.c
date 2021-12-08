@@ -1,8 +1,11 @@
 #include "shell.h"
 
 /**
- * main- function emulates a shell
- **/
+ * main - function that emulates a shell
+ *
+ * Return: Always 0.
+ */
+
 int main()
 {
 	char *data = NULL;
@@ -25,5 +28,5 @@ int main()
 		execFunction(tokens, number_loop);
 		number_loop++;
 	}
-	return 0;
+	return (0);
 }

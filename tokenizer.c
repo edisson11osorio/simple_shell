@@ -1,8 +1,11 @@
 #include "shell.h"
 
 /**
- *
- **/
+ * tokenizer - function that tokenize the string received
+ * @command: pointer to string
+ * Return: pointer to array of strings (arguments)
+ */
+
 char **tokenizer(char *command)
 {
 	char **token = malloc(sizeof(char *) * 1024);
@@ -32,6 +35,13 @@ char **tokenizer(char *command)
 	}
 	return (token);
 }
+
+/**
+ * tokenizer_path - function that tokenize the path
+ * @copyPath: pointer to entire path
+ * Return: pointer to path divided (directories)
+ */
+
 char **tokenizer_path(char *copyPath)
 {
 	char **directories = malloc(sizeof(char *) * 1024);
