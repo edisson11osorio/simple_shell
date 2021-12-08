@@ -3,7 +3,6 @@
 /**
  * execFunction - looks the input instruction, compare and execute
  * @token: input tokenized
- * @number_loop: number of processes runned in the shell
  * Return: Always 0.
  */
 

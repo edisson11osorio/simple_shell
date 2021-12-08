@@ -5,7 +5,6 @@
  * a not builtin function
  * @token: instruction tokenized in args
  * @directories: path tokenized
- * @number_loop: number process runned in the shell
  * Return: pointer with the path of the executable file
  */
 
