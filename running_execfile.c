@@ -20,7 +20,7 @@ void running_execfile(char *execfile, char **token)
 	if (pid == -1)
 	{
 		perror("fork");
-		free (*token);
+		free(*token);
 		exit(EXIT_FAILURE);
 	}
 	if (pid == 0)

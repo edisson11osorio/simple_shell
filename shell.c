@@ -13,17 +13,12 @@ int main(void)
 	char command[1024];
 	char **tokens;
 
-	if (isatty(STDOUT_FILENO))
-	{
-		while (1)
-		{
-			prompt();
-			data = read_input(&data, &sizebuffer);
-			_strcpy(command, data);
-			tokens = tokenizer(command);
-			execFunction(tokens);
-		}
-		return (0);
-	}
+	do {
+		prompt();
+		data = read_input(&data, &sizebuffer);
+		_strcpy(command, data);
+		tokens = tokenizer(command);
+		execFunction(tokens);
+	} while (isatty(STDIN_FILENO));
 	return (0);
 }
