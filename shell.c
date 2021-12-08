@@ -23,5 +23,7 @@ int main(void)
 		tokens = tokenizer(command);
 		execFunction(tokens);
 	} while (1);
+	free(data);
+	free(tokens);
 	return (0);
 }
