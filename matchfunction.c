@@ -1,8 +1,14 @@
 #include "shell.h"
 
 /**
- * main- function emulates a shell
- **/
+ * matchFunction - Function that find the executable file of
+ * a not builtin function
+ * @token: instruction tokenized in args
+ * @directories: path tokenized
+ * @number_loop: number process runned in the shell
+ * Return: pointer with the path of the executable file
+ */
+
 char *matchfunction(char **token, char **directories, int number_loop)
 {
 	int i, function = 1;

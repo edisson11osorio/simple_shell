@@ -1,9 +1,12 @@
 #include "shell.h"
 
 /**
- *
- *
- **/
+ * execFunction - looks the input instruction, compare and execute
+ * @token: input tokenized
+ * @number_loop: number of processes runned in the shell
+ * Return: Always 0.
+ */
+
 void execFunction(char **token, int number_loop)
 {
 	if (strcmp(*token, "exit") == 0)

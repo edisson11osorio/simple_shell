@@ -2,7 +2,7 @@
 
 /**
  * prompt - prints the prompt of the shell
- * Return : void
+ * Return : Nothing
  */
 void prompt(void)
 {

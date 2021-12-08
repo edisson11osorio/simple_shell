@@ -17,7 +17,7 @@ int main()
 		data = read_input(&data, &sizebuffer);
 		if (*data == EOF)
 		{
-			printf("\n");
+			/*printf("\n");*/
 			exit(0);
 		}
 		strcpy(command, data);

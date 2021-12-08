@@ -1,8 +1,12 @@
 #include "shell.h"
 
 /**
- *
- **/
+ * running_execfile - run the executable file to the instruction
+ * @execfile: executable file
+ * @token: instruction tokenized
+ * Return: Nothing
+ */
+
 void running_execfile(char *execfile, char **token)
 {
 	pid_t pid;
