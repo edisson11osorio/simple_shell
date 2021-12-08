@@ -17,11 +17,6 @@ int main(void)
 	{
 		prompt();
 		data = read_input(&data, &sizebuffer);
-		if (*data == EOF)
-		{
-			_putchar('\n');
-			exit(0);
-		}
 		_strcpy(command, data);
 		tokens = tokenizer(command);
 		execFunction(tokens);

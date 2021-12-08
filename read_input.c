@@ -18,5 +18,11 @@ char *read_input(char **data, size_t *sizebuffer)
 		free(*data);
 		return (NULL);
 	}
+	if (charactersRead == EOF)
+	{
+		free(*data);
+		_putchar('\n');
+		exit(0);
+	}
 	return (*data);
 }
