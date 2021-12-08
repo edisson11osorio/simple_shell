@@ -38,6 +38,9 @@ void execFunction(char **token, int number_loop);
 char *pathFunction(void);
 char *matchfunction(char **token, char **directories, int number_loop);
 char *str_concat(char *s1, char *s2);
+int _strcmp(char *s1, char *s2);
+char *_strcpy(char *dest, char *src);
+int _strlen(char *s);
 void running_execfile(char *execfile, char **token);
 
 #endif
