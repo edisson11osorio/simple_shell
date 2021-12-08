@@ -6,7 +6,7 @@
  * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
 	char *data = NULL;
 	size_t sizebuffer = 0;

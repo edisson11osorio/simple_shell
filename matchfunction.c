@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * matchFunction - Function that find the executable file of
+ * matchfunction - Function that find the executable file of
  * a not builtin function
  * @token: instruction tokenized in args
  * @directories: path tokenized
