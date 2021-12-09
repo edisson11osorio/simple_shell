@@ -1,0 +1,29 @@
+.TH man 1 "9 Diciembre 2021" "1.0" " hsh man page"
+.SH NAME
+hsh \- POSIX-compliant command interpreter
+.SH SYNOPSIS
+hsh [options]
+.SH DESCRIPTION
+.B hsh is a POSIX-compliant command interpreter (shell).
+It is implemented by re-execing as either bash(1), dash(1), or zsh(1)
+
+.I  format
+ Find and execute the commands given on the prompt
+
+If the command does not exist in the PATH return command not found
+
+.SH OPTIONS
+The hsh does not take any options.
+.SH RETURN
+On successful return 1
+.SH EXAMPLE
+ hsh ls
+
+Prints on the standard output the list of files and directories of the current path
+.SH SEE ALSO
+bash(1), dash(1), ksh(1), tcsh(1), zsh(1)
+.SH BUGS
+No known bugs, so far.
+.SH AUTHOR
+Joana Casallas 
+Edison Osorio 
