@@ -20,6 +20,7 @@ char *read_input_interactive(char **data, size_t *sizebuffer)
 	}
 	if (charactersRead == EOF)
 	{
+		_puts("\n");
 		free(*data);
 		exit(EXIT_SUCCESS);
 	}
