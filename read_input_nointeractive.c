@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * read_input - function that read and store any instruction
+ * read_input_nointeractive - function that read and store any instruction
  * @data: the adress where instruction is stored (buffer)
  * @sizebuffer: size of instruction
  * Return: pointer to buffer where information is stored
