@@ -55,6 +55,7 @@ char **tokenizer_path(char *copyPath)
 	directories[0] = malloc(sizeof(char) * 1024);
 	if (directories[0] == NULL)
 	{
+		free(directories);
 		return (NULL);
 	}
 	directories[0] = strtok(copyPath, DELIM);
@@ -66,6 +67,7 @@ char **tokenizer_path(char *copyPath)
 		directories[i] = malloc(sizeof(char) * 1024);
 		if (directories[i] == NULL)
 		{
+			free(directories);
 			return (NULL);
 		}
 		directories[i] = strtok(NULL, DELIM);
