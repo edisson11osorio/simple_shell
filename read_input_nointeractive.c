@@ -7,7 +7,7 @@
  * Return: pointer to buffer where information is stored
  */
 
-char *read_input(char **data, size_t *sizebuffer)
+char *read_input_nointeractive(char **data, size_t *sizebuffer)
 {
 	ssize_t charactersRead = 0;
 
@@ -21,7 +21,6 @@ char *read_input(char **data, size_t *sizebuffer)
 	if (charactersRead == EOF)
 	{
 		free(*data);
-		_putchar('\n');
 		exit(EXIT_SUCCESS);
 	}
 	return (*data);

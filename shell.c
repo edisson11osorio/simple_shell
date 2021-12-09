@@ -17,8 +17,12 @@ int main(void)
 		if (isatty(STDIN_FILENO))
 		{
 			prompt();
+			data = read_input_interactive(&data, &sizebuffer);
 		}
-		data = read_input(&data, &sizebuffer);
+		else
+		{
+			data = read_input_nointeractive(&data, &sizebuffer);
+		}
 		_strcpy(command, data);
 		tokens = tokenizer(command);
 		execFunction(tokens);

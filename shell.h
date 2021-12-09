@@ -29,7 +29,8 @@ extern char **environ;
 
 /*new functions*/
 void prompt(void);
-char *read_input(char **data, size_t *sizebuffer);
+char *read_input_interactive(char **data, size_t *sizebuffer);
+char *read_input_nointeractive(char **data, size_t *sizebuffer);
 char **tokenizer(char *command);
 char **tokenizer_path(char *path);
 void execFunction(char **token);
